@@ -151,12 +151,7 @@ p.k {
   font-weight:bold;
 }
 
-.sprite {background:url("css_sprites.png") no repeat;
-  padding:1vw;
-  width:100%;
-  height:auto;
-  margin:auto;
-}
+.sprite {background:url("css_sprites.png") no repeat;}
 
 .bg-brioche_frontend {
     width: 107.78vw; height: 38.42vh;
