@@ -1,33 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Bread Shop</title>
+<title>Create Account</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="keywords" content="'pluto bakery', 'bakery', 'buy bread', 'bread', 'bread shop'">
+<meta name="keywords" content="'pluto bakery', sign-up">
 <link rel="stylesheet" href="plutobakery.css">
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"> 
 </head>
 <body>
 
+<?php
 
-<!-- Design the bread shop page -->
-  
-  <h1> Bread Shop </h1>
-  <p style="font-family:'dancing script', cursive; font-size:1.8rem; letter-spacing:3px;">Select from a mouth-watering array of bread. 
-          It's time to add a special touch to your events! </p>
- <div class="zopf" style="background-image:url('spritesheet.png');"> 
-</div>
+// php code to validate submitted data.
 
- <i class="sprite sprite-Englishmuffins-frontend"> </i>   
+// define variables and set to empty values
+$fname = $sname = $phone = $email = $prefix = $password = $street = $town = $state = $country = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $fname = test_input($_POST["fname"]);
+  $sname = test_input($_POST["sname"]);
+  $prefix = test_input($_POST["prefix"]);
+  $phone = test_input($_POST["phone"]);
+  $email = test_input($_POST["email"]);
+  $password = test_input($_POST["password"]);
+  $street = test_input($_POST["street"]);
+  $town = test_input($_POST["town"]);
+  $state = test_input($_POST["state"]);
+  $country = test_input($_POST["country"]);
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+
+// message to be delivered after successful registeration.
+
+if (isset($_POST['fname']) && (isset($_POST['sname']) && (isset($_POST['prefix']) && (isset($_POST['email']) && (isset($_POST['phone']) && (isset($_POST['password']){
+echo "Dear $prefix $sname, <br> Your account has been created successfully. <br> You may now <a href="login.html">login</a>";
+}
+
+?>
 
 
 
-  
+
 </body>
 </html>
-
-
-
-
