@@ -1,51 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Create Account</title>
+<title>Pluto Bakery</title>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="keywords" content="'pluto bakery', sign-up">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="'pluto bakery', 'bakery', 'buy bread', 'bread', 'bread shop'">
 <link rel="stylesheet" href="plutobakery.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 
-<?php
 
-// php code to validate submitted data.
-
-// define variables and set to empty values
-$fname = $sname = $phone = $email = $prefix = $password = $street = $town = $state = $country = "";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $fname = test_input($_POST["fname"]);
-  $sname = test_input($_POST["sname"]);
-  $prefix = test_input($_POST["prefix"]);
-  $phone = test_input($_POST["phone"]);
-  $email = test_input($_POST["email"]);
-  $password = test_input($_POST["password"]);
-  $street = test_input($_POST["street"]);
-  $town = test_input($_POST["town"]);
-  $state = test_input($_POST["state"]);
-  $country = test_input($_POST["country"]);
-}
-
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-
-// message to be delivered after successful registeration.
-
-if (isset($_POST['fname']) && (isset($_POST['sname']) && (isset($_POST['prefix']) && (isset($_POST['email']) && (isset($_POST['phone']) && (isset($_POST['password']){
-echo "Dear $prefix $sname, <br> Your account has been created successfully. <br> You may now <a href="login.html">login</a>";
-}
-
-?>
+<!-- Design the bread shop page -->
+<div class="homepage"> 
+<div class="wuto-plutobakery_icon" style="background-image:url('spritesheet-wuto.png'); width:185px; height:273px; float:right; margin:none;"></div>
+  <h1 style="padding-top:5rem; text-shadow: 6px 5px 18px 5px #9f9f2d; font-size: 6rem;"> Wito Bakery </h1>
+</div>
 
 
+<navbar> 	
+<ul class="y">
+<li class="y"><a href="#"> Home</a></li>
+<li class="y"><a href="bread shop-page1.html" target="_self"> Bread Shop</a></li>
+<li class="y"><a href="Login.html" target="_blank">Login</a></li>
+<li class="y"><a href="Register.html" target="_blank">Register</a></li>
+<li class="y"><a href="contact.html" target="_blank"> Contact us</a></li>
+<li class="y" style="float:right;"> <?php echo "You are currently logged in as .$email"; ?></li>
+</ul>
+</navbar>
+
+<aside>
+<div class="home"> Wito bakery delivers bread to my office every week.<br> - Mrs Adefiyi</div><br>
+<div class="home2"> Their bread is soft and delicious, I'm addicted.<br> - Mr Charles</div><br>
+<div class="home3"> Superb service.<br> - Miss Tolulope Odedipe</div><br>
+<div class="home4"> Two years ago, a friend refered me to Wito bakery and I haven't been dissapointed ever since.<br> - Abdulahhi Musa</div><br>
+<div class="home5"> I like their kind of bread.<br> - Onyeka</div><br>
+
+<div style="margin-top:50%; font-family:'helvetica', serif; line-height:1rem;">
+<h3 style="letter-spacing:3px; text-align:center;"> <u>Announcements</u></h3>
+<p style="letter-spacing:3px; text-align:center;">2021</p>
+<ul style="list-style-type:disc; font-size:13px;">
+<li> June 10 <br> We apologise that we won't be able to make any deliveries on June 12 due to logistics.</li><br><br>
+<li> June 20 <br> Ileya promo is out! <br> Buy a dozen loafs of bread and get two free loafs &#128515; &#128522;</li><br><br>
+<li> June 23 <br> Starting August, we will be adding Injera bread to our list of brands &#128523; &#128523;</li><br><br>
+</ul>
+</div>
+</aside>
 
 
+
+<section>
+<div style="background-image:url('spritesheet-wuto.png'); width:800px; height:533px; margin: 5% auto;"> </div>
+
+<article class="description" style="border:none; padding:2% 8%; line-height:2.02rem; letter-spacing:2px; font-size:17px; font-family:Verdana, sans-serif;"> <span style="color:#f9c11a; font-size:23px;"> We bake tasty bread, </span> it's an art we've come to master. 
+Our aim is to present a wide variety of "exotic" bread, and watching customers enjoy these delicacies is a joy. <br><br> 
+After going far and wide to learn how bread is made at different parts of the world, we have become skilled at baking foreign bread - and providing home deliveries. <br>
+Yep, our customers eat foreign bread without having to leave home.
+<br><br>
+There are different brands of delicious bread to choose from. For those with a sweet tooth, who prefer sweetened bread or others who would rather eat the low-sugar brand or anything inbetween; we have brands to meet every need.
+<br><br>
+Our customers have remained loyal to us through the years because we don't let them down. They rely on us to deliver on time and in good quality. <br>
+We sell at our bread shop and can also deliver to your home or work place if you'd like.<br> So head over to our shop to buy now.</article>
+
+</section>
+
+
+
+<a class="m mm2" href="bread shop-page1.html" target="_blank"> Bread Shop</a>
+
+<footer>
+<pre>
+Customer care: support@witobakery.com
+
+<u>Address</u>
+181 Flowering street
+Off Oyebo close
+Mokola
+Ibadan
+Oyo
+Nigeria
+Tel:+2348000007777
+</pre>
+
+<p style="text-align:center;">Created by Dayo Abdul &#169; 2021 </p>
+</footer>
 </body>
 </html>
+
+
+
+
